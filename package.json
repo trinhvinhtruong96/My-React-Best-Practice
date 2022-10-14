@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "lint": "eslint --ext .tsx,.ts src",
+    "lint:fix": "eslint --ext .tsx,.ts --fix src",
+    "test": "jest src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint",
+      "pre-push": "npm test"
+    }
+  },
+  "devDependencies": {
+    "husky": "^8.0.1"
+  }
+}
