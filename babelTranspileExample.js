@@ -20,3 +20,16 @@ _jsx(
   )
 )
 
+/* 
+const attrs = {
+  id: 'myId',
+  className: 'myClass'
+ }
+ return <div {...attrs} /> 
+*/
+var attrs = {
+  id: 'myId',
+  className: 'myClass'
+ }
+_jsx('div', attrs)
+
