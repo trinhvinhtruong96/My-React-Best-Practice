@@ -30,6 +30,16 @@ const attrs = {
 var attrs = {
   id: 'myId',
   className: 'myClass'
- }
+}
 _jsx('div', attrs)
 
+// render-if package
+const { dataIsReady, isAdmin, userHasPermissions } = props
+const canShowSecretData = renderIf(
+  dataIsReady && (isAdmin || userHasPermissions)
+);
+return (
+  <div>
+    {canShowSecretData(<SecretData />)}
+  </div >
+);
