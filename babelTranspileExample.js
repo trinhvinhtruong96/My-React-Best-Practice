@@ -61,3 +61,26 @@ const MyComponent = () => (
   </div>
 )
 export default MyComponent
+
+//jsx-control-statements
+const jsxControlComponent = <>
+  <If condition={true}>
+    <SecretData />
+  </If>
+  <Choose>
+    <When condition={true}>
+      <span>if</span>
+    </When>
+    <When condition={true}>
+      <span>else if</span>
+    </When>
+    <Otherwise>
+      <span>else</span>
+    </Otherwise>
+  </Choose>
+  <ul>
+    <For each="user" of={this.props.users}>
+      <li>{user.name}</li>
+    </For>
+  </ul>
+</> 
