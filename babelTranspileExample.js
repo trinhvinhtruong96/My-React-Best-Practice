@@ -43,3 +43,21 @@ return (
     {canShowSecretData(<SecretData />)}
   </div >
 );
+
+
+// react-only-if
+import onlyIf from 'react-only-if'
+const SecretDataOnlyIf = onlyIf(
+  ({ dataIsReady, isAdmin, userHasPermissions }) => dataIsReady &&
+    (isAdmin || userHasPermissions)
+)(SecretData)
+const MyComponent = () => (
+  <div>
+    <SecretDataOnlyIf
+      dataIsReady={...}
+      isAdmin={...}
+      userHasPermissions={...}
+    />
+  </div>
+)
+export default MyComponent
